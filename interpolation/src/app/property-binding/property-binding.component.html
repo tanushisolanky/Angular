@@ -1,0 +1,32 @@
+<p>property-binding works!</p>
+<!-- image binding -->
+<img [src] = "imageUrl" height="100px" width="200px">
+
+<!-- colspan binding -->
+<table>
+    <tr>
+        <td>one</td>
+        <td>two</td>
+    </tr>
+    <tr>
+        <td [colSpan]="1 + 1">three-four</td>
+    </tr>
+    <tr>
+        <td>five</td>
+        <td>six</td>
+    </tr>
+</table>
+
+<!-- diabled button binding -->
+
+<button type="submit" [disabled]="!disable">SUBMIT</button>
+
+<!-- attribute binding -->
+<div>
+<img [attr.src]="image" height="200px" width="200px">
+</div>
+
+<!-- class binding -->
+
+<!-- <p [class.ptag]="class">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolores? Minus quod quo nemo optio tempora soluta animi sit
+     corporis, sapiente iste, eaque modi aspernatur iure error neque, dignissimos exercitationem!</p> -->

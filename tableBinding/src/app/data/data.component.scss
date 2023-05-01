@@ -1,0 +1,21 @@
+table,th,td{
+    border: 1px solid rgb(122, 122, 247);
+    border-radius: 5px;
+}
+table{
+    width: 100%;
+}
+td,th{
+    text-align: center;
+    height: 40px;
+}
+tr:nth-child(even){
+    background-color:  rgb(194, 215, 230);
+}
+.search{
+    height: 30px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}

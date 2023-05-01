@@ -1,0 +1,48 @@
+
+<div>
+    <input type="text" [(ngModel)]="searchText" class="search" placeholder="SEARCH">
+</div>
+
+<table>
+    <thead>
+        <tr *ngFor="let header of tableHead">
+            <th>
+                {{header.id}}
+            </th>
+            <th>
+                {{header.name}}
+            </th>
+            <th>
+                {{header.department}}
+            </th>
+            <th>
+                {{header.salary}}
+            </th>
+            <th>
+                {{header.Date}}
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of tableData  | searchPipe: searchText; "  >
+            <td appHighlight>
+                {{data.id}}
+            </td>
+            <td appHighlight>
+                {{data.name | shorten}}
+            </td>
+            <td appHighlight>
+                {{data.department}}
+            </td >
+            <td appHighlight>
+                {{data.salary}}
+            </td>
+            <td appHighlight>
+                {{data.Date | date: 'dd/MM/YYYY'}}
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
